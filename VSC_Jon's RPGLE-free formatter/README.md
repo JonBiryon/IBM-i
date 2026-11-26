@@ -1,4 +1,5 @@
-# Jon's RPGLE-free formatter [Made with Codex]
+# Jon's RPGLE-free formatter
+_[Made with Codex]_
 
 Version 0.4.3 combines **fully-free and mixed/column-limited RPGLE and strict embedded SQL formatting** with the
 indentation-aware **Ctrl+/** line commenter (**Cmd+/** on macOS).
