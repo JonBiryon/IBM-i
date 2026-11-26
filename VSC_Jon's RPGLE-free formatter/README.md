@@ -1,6 +1,8 @@
 # Jon's RPGLE-free formatter
 _[Made with Codex]_
 
+[Download version 0.4.3 VSIX](./dist/jons-rpgle-free-formatter-0.4.3.vsix?raw=true)
+
 Version 0.4.3 combines **fully-free and mixed/column-limited RPGLE and strict embedded SQL formatting** with the
 indentation-aware **Ctrl+/** line commenter (**Cmd+/** on macOS).
 Extension ID: `local-rpgle-tools.jons-rpgle-free-formatter`.
