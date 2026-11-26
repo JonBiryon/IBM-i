@@ -1,0 +1,35 @@
+{
+  "name": "jons-rpgle-free-formatter",
+  "displayName": "Jon's RPGLE-free formatter",
+  "description": "Indent fully-free RPGLE source and retain indentation-aware free-form line commenting.",
+  "version": "0.1.0",
+  "publisher": "local-rpgle-tools",
+  "license": "UNLICENSED",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Formatters", "Other"],
+  "main": "./out/extension.js",
+  "activationEvents": ["onLanguage:rpgle", "onLanguage:sqlrpgle"],
+  "contributes": {
+    "commands": [{
+      "command": "rpgleFreeFormatter.toggle",
+      "title": "Jon's RPGLE-free formatter: Toggle Line Comment",
+      "enablement": "editorTextFocus && !editorReadonly && (editorLangId == rpgle || editorLangId == sqlrpgle)"
+    }],
+    "keybindings": [{
+      "command": "rpgleFreeFormatter.toggle",
+      "key": "ctrl+/",
+      "mac": "cmd+/",
+      "when": "editorTextFocus && !editorReadonly && (editorLangId == rpgle || editorLangId == sqlrpgle)"
+    }]
+  },
+  "scripts": {
+    "compile": "node scripts/build.cjs",
+    "test": "npm run compile && node scripts/test.cjs",
+    "package": "npm run compile && node scripts/package.cjs"
+  },
+  "devDependencies": {
+    "@types/vscode": "1.85.0",
+    "typescript": "~5.9.3",
+    "yazl": "^3.3.1"
+  }
+}

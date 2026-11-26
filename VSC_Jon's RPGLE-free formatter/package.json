@@ -1,0 +1,47 @@
+{
+  "name": "jons-rpgle-free-formatter",
+  "displayName": "Jon's RPGLE-free formatter",
+  "description": "Format fully-free and mixed column-limited RPGLE and embedded SQL; retain indentation-aware free-form line commenting.",
+  "version": "0.4.3",
+  "publisher": "local-rpgle-tools",
+  "license": "UNLICENSED",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:rpgle",
+    "onLanguage:sqlrpgle"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "rpgleFreeFormatter.formatSelectionOrDocument",
+        "title": "Jon's RPGLE-free formatter: Format Selection or Document",
+        "enablement": "editorTextFocus && !editorReadonly && (editorLangId == rpgle || editorLangId == sqlrpgle)"
+      },
+      {
+        "command": "rpgleFreeFormatter.toggle",
+        "title": "Jon's RPGLE-free formatter: Toggle Line Comment",
+        "enablement": "editorTextFocus && !editorReadonly && (editorLangId == rpgle || editorLangId == sqlrpgle)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "rpgleFreeFormatter.toggle",
+        "key": "ctrl+/",
+        "mac": "cmd+/",
+        "when": "editorTextFocus && !editorReadonly && (editorLangId == rpgle || editorLangId == sqlrpgle)"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "node scripts/check.cjs",
+    "test": "node scripts/test.cjs",
+    "package": "node scripts/check.cjs --package"
+  }
+}
